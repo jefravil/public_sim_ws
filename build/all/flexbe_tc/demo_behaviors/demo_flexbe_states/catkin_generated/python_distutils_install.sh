@@ -1,0 +1,33 @@
+#!/bin/sh
+
+if [ -n "$DESTDIR" ] ; then
+    case $DESTDIR in
+        /*) # ok
+            ;;
+        *)
+            /bin/echo "DESTDIR argument must be absolute... "
+            /bin/echo "otherwise python's distutils will bork things."
+            exit 1
+    esac
+fi
+
+echo_and_run() { echo "+ $@" ; "$@" ; }
+
+echo_and_run cd "/home/simulations/public_sim_ws/src/all/flexbe_tc/demo_behaviors/demo_flexbe_states"
+
+# ensure that Python install destination exists
+echo_and_run mkdir -p "$DESTDIR/home/simulations/public_sim_ws/install/lib/python3/dist-packages"
+
+# Note that PYTHONPATH is pulled from the environment to support installing
+# into one location when some dependencies were installed in another
+# location, #123.
+echo_and_run /usr/bin/env \
+    PYTHONPATH="/home/simulations/public_sim_ws/install/lib/python3/dist-packages:/home/simulations/public_sim_ws/build/lib/python3/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/simulations/public_sim_ws/build" \
+    "/usr/bin/python3" \
+    "/home/simulations/public_sim_ws/src/all/flexbe_tc/demo_behaviors/demo_flexbe_states/setup.py" \
+     \
+    build --build-base "/home/simulations/public_sim_ws/build/all/flexbe_tc/demo_behaviors/demo_flexbe_states" \
+    install \
+    --root="${DESTDIR-/}" \
+    --install-layout=deb --prefix="/home/simulations/public_sim_ws/install" --install-scripts="/home/simulations/public_sim_ws/install/bin"

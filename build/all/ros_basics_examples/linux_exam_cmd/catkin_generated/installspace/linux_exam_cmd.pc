@@ -1,0 +1,8 @@
+prefix=/home/simulations/public_sim_ws/install
+
+Name: linux_exam_cmd
+Description: Description of linux_exam_cmd
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

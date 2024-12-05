@@ -1,0 +1,8 @@
+prefix=/home/simulations/public_sim_ws/install
+
+Name: robot_controllers_interface
+Description: Description of robot_controllers_interface
+Version: 0.6.0
+Cflags: -I${prefix}/include -I/usr/include
+Libs: -L${prefix}/lib -lrobot_controllers_interface /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+Requires: actionlib pluginlib roscpp robot_controllers_msgs

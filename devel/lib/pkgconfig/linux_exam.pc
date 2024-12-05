@@ -1,0 +1,8 @@
+prefix=/home/simulations/public_sim_ws/devel
+
+Name: linux_exam
+Description: Description of linux_exam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

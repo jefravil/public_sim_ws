@@ -1,0 +1,8 @@
+prefix=/home/simulations/public_sim_ws/install
+
+Name: worlds_tc
+Description: Description of worlds_tc
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

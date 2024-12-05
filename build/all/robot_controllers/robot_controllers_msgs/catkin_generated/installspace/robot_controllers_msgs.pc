@@ -1,0 +1,8 @@
+prefix=/home/simulations/public_sim_ws/install
+
+Name: robot_controllers_msgs
+Description: Description of robot_controllers_msgs
+Version: 0.6.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: actionlib_msgs message_runtime std_msgs

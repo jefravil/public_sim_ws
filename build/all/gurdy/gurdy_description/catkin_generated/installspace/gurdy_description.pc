@@ -1,0 +1,8 @@
+prefix=/home/simulations/public_sim_ws/install
+
+Name: gurdy_description
+Description: Description of gurdy_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

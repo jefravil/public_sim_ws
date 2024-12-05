@@ -1,0 +1,8 @@
+prefix=/home/simulations/public_sim_ws/install
+
+Name: person_sim
+Description: Description of person_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy gazebo_ros

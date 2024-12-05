@@ -1,0 +1,8 @@
+prefix=/home/simulations/public_sim_ws/devel
+
+Name: flexbe_app
+Description: Description of flexbe_app
+Version: 2.0.6
+Cflags: -I/home/simulations/public_sim_ws/src/all/flexbe_tc/flexbe_app/src
+Libs: -L${prefix}/lib -lflexbe_app
+Requires: 
